@@ -66,9 +66,13 @@ color: red;
 background-color: aquamarine;
 }
 
-p::first-letter {
+h1::first-letter, ::first-letter {
     color: red;
     font-size:  xx-large;
+}
+
+p::first-line{
+    background-color: yellow;
 }
     </style>
 </head>
@@ -127,7 +131,7 @@ p::first-letter {
             <div>cetvrti div blok</div>
             <div>peti div blok</div>
         </section>
-<hr>
+        <br><hr><br>
         <h2>*only-of-type</h2>
         Svaki element <b>koji je jedini</b> (jedini paragraf, jedini div...) na svom hijerarhijskom nivou.
         <section class="oot">
@@ -142,7 +146,7 @@ p::first-letter {
             <div>cetvrti div blok</div>
             <div>peti div blok</div>
         </section>
-<hr>
+        <br><hr><br>
         <h2>div:nth-last-of-type(2)</h2>
         <b>pretposljednji</b> div od svih div elemenata na svom hijerahijskom nivou.
         <section class="nthl">
@@ -158,7 +162,7 @@ p::first-letter {
             <p>paragraf je pretposljednji element</p>
             <div>peti div element</div>
         </section>
- <hr>
+        <br><hr><br>
         <h2>div.kk:nth-of-type(odd)</h2>
         svaki <b>neparni</b> od div blokova na istom nivou, ali <b>samo ako je klase kk</b>
         <section class="ntt">
@@ -170,13 +174,13 @@ p::first-letter {
             <p class="kk">paragraf klase kk</p>
             <div class="kk">peti div blok klase kk</div>
         </section>
-<hr>
+        <br><hr><br>
 
         <h1>Demo za ::after selektor</h1>
 
         <p>moje ime je Pero</p>
         <p>Zivim u Osijeku</p>
-<hr>
+        <br><hr><br>
         <h1>Demo za ::before selektor</h1>
 
         <p>moje ime je Pero</p>
@@ -187,6 +191,17 @@ p::first-letter {
         <p>drugi tekst</p>
         <p>treci tekst</p>
         <p>cetvrti tekst</p>
+
+        <br><hr><br>
+
+        <h1>Demo za ::first-line selektor</h1>
+
+        <h2>cilj zadatka je obojati prvu liniju teksta</h2>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda f<br>
+            acilis eius, doloremque, nobis, expedita officiis vitae debitis 
+            laborum aperiam autem est tempora amet<br> consectetur explicabo digniss
+            imos? Doloremque voluptates debitis excepturi.</p>
         
 </body>
 </html>
