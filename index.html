@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body { font-family: sans-serif;
+        font-size: 16px;
+        color: darkblue;
+        background-color: white;}
+
+        h1 {font-size: 1.5em;
+        font-weight: bold;}
+
+        h2 {font-size: 16px;
+        margin: 0 0 0.5em 0;}
+
+div {font-size: 8pt;
+background-color: yellow;
+padding: 3px;
+border: 1px blue solid;
+margin: 0.5em 0;}
+
+.fc div:first-child{
+    background-color: green;
+}
+.nth1 div:nth-child(odd){
+    font-weight: bold;
+    background-color: lightgreen;
+}
+
+.nth2 *:nth-child(-n+3){
+    font-weight: bold;
+    background-color: #fcc;
+}
+    </style>
+</head>
+<body>
+    <h1>Pseudo klase</h1>
+    <h2>div:first child</h2>
+    svaki div element koji je <b>prvi</b> element na svom hijerahijskom nivou.
+    <section class="fc">
+        <div>prvi div blok u sekciji</div>
+        <div>drugi blok
+           <p>prvi paragraf unutar drugog bloka</p>
+           <div>
+            prvi div blok unutar drugog bloka
+           </div>
+        </div>
+        <div>treci div blok
+            <div>prvi div unutar treceg</div>
+            <div>drugi div unutar treceg</div>
+        </div>
+    </section>
+
+        <h2>div:nth-child</h2>
+        svaki div element koji je na <b>neparnoj</b> poziciji na svom nivou.
+        <section class="nth1">
+            <div>Prvi div blok u sekciji</div>
+            <div>drugi div blok</div>
+            <p>umetnut paragraf</p>
+            <div>treci div blok</div>
+            <div>cetvrti div blok</div>
+            <div>peti div blok</div>
+        </section>
+
+        <h2>*:nth-child(-n+3)</h2>
+        Bilo koja <b>prva tri elementa</b> na nivou.
+        <section class="nth2">
+            <div>prvi div blok u sekciji</div>
+            <div>drugi div blok u sekciji</div>
+            <p>umetnut paragraf</p>
+            <div>treci div blok</div>
+            <div>cetvrti div blok</div>
+            <div>peti div blok</div>
+        </section>
+        <br><hr><br>
+
+        
+ 
+</body>
+</html>
