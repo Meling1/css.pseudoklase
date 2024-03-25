@@ -34,6 +34,31 @@ margin: 0.5em 0;}
     font-weight: bold;
     background-color: #fcc;
 }
+.fot div:first-of-type {
+    font-weight: bold;
+    background-color: #ecf;
+}
+
+.oot *:only-of-type {
+    font-weight: bold;
+    background-color: magenta;
+}
+
+.nthl div:nth-last-of-type(2){
+    font-weight: bold;
+    background-color: #ccf;
+}
+
+.ntt div.kk:nth-of-type(odd) {
+    font-weight: bold;
+    background-color: orange;
+}
+
+p::after {
+    content: "- Zapamti ovo !!";
+    color: red;
+    background-color: yellow;
+}
     </style>
 </head>
 <body>
@@ -77,7 +102,68 @@ margin: 0.5em 0;}
         </section>
         <br><hr><br>
 
-        
+        <h2>div:first-of-type</h2>
+        Svaki div element, <b>ako je prvi</b> od div-ova na svom hijerarhijskom nivou.
+        <section class="fot">
+            <div>prvi div blok u sekciji</div>
+            <div>drugi div blok</div>
+            <p>umetnut paragraf</p>
+            <div>treci div blok
+                <p>paragraf unutar trećeg bloka</p>
+                <div>prvi div unutar treceg bloka</div>
+                <div>drugi div u trecem bloku</div>
+            </div>
+            <div>cetvrti div blok</div>
+            <div>peti div blok</div>
+        </section>
+
+        <h2>*only-of-type</h2>
+        Svaki element <b>koji je jedini</b> (jedini paragraf, jedini div...) na svom hijerarhijskom nivou.
+        <section class="oot">
+            <div>Prvi blok u sekciji</div>
+            <div>drugi div blok</div>
+            <p>jedini paragraf u velikom bloku</p>
+            <div>treci div blok
+                <p>paragraf unutar treceg bloka</p>
+                <div>jedini div u trecem bloku</div>
+                <p>drugi paragraf u trecem bloku</p>
+            </div>
+            <div>cetvrti div blok</div>
+            <div>peti div blok</div>
+        </section>
+
+        <h2>div:nth-last-of-type(2)</h2>
+        <b>pretposljednji</b> div od svih div elemenata na svom hijerahijskom nivou.
+        <section class="nthl">
+            <div>prvi div u blok sekciji</div>
+            <div>drugi div blok</div>
+            <p>jedini paragraf u velikom bloku</p>
+            <div> treci div blok
+                <p>paragraf unutar treceg bloka</p>
+                <div>jedini div u trecem bloku</div>
+                <p>dr paragraf u trecem bloku</p>
+            </div>
+            <div>cetvrti div blok</div>
+            <p>paragraf je pretposljednji element</p>
+            <div>peti div element</div>
+        </section>
  
+        <h2>div.kk:nth-of-type(odd)</h2>
+        svaki <b>neparni</b> od div blokova na istom nivou, ali <b>samo ako je klase kk</b>
+        <section class="ntt">
+            <div class="kk">Prvi div blok u sekciji klase kk</div>
+            <div class="kk">drugi div blok klase kk</div>
+            <p>paragraf u sekciji</p>
+            <div>treci div blok</div>
+            <div class="kk">cetvrti div blok klase kk</div>
+            <p class="kk">paragraf klase kk</p>
+            <div class="kk">peti div blok klase kk</div>
+        </section>
+
+
+        <h1>Demo za ::after selektor</h1>
+
+        <p>moje ime je Pero</p>
+        <p>Zivim u Osijeku</p>
 </body>
 </html>
