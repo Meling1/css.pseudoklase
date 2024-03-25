@@ -60,11 +60,11 @@ p::after {
     background-color: yellow;
 }
 
-p::before {
+/* p::before {
 content: "Zapamti ovo -->";
 color: red;
 background-color: aquamarine;
-}
+} */
 
 h1::first-letter, ::first-letter {
     color: red;
@@ -83,6 +83,24 @@ p::first-letter {
 p::first-line {
     color: blue;
     font-variant: small-caps;
+}
+
+::marker {
+    color: red;
+    font-size: xx-large;
+}
+
+.geek1 {
+    list-style-type: circle;
+}
+
+.geek2{
+    list-style-type: lower-roman;
+}
+
+::selection{
+    color: rebeccapurple;
+    background: lightyellow;
 }
     </style>
 </head>
@@ -213,6 +231,8 @@ p::first-line {
             laborum aperiam autem est tempora amet<br> consectetur explicabo digniss
             imos? Doloremque voluptates debitis excepturi.</p>
 
+    <br><hr><br>
+
 
         <h1>Demo za ::first-letter i ::first-line selektor</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
@@ -220,6 +240,30 @@ p::first-line {
               Reiciendis quibusdam, labore sit rem vero voluptate,<br>
                ipsam deleniti molestias ad assumenda ducimus.</p>
 
-        
+        <br><hr><br>
+
+        <h1>Demo za ::marker selektor</h1>
+
+        <ul class="geek1">
+            <li>Kava</li>
+            <li>Čaj</li>
+            <li>Mlijeko</li>
+        </ul>
+        <ol class="geek2">
+            <li>Prvi</li>
+            <li>drugi</li>
+            <li>treci</li>
+        </ol>
+        <br><hr><br>
+
+       <h1>Demo za ::selection selektor</h1>
+       
+       <h2>Cilj zadatka je obojati označeni dio teksta koji je korisnik označio mišem</h2>
+
+       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+         Quia totam cumque qui voluptatibus id <br>
+         rem maiores atque laudantium architecto qui<br>
+         squam. Aliquid tempore voluptatem, ut aut numquam adipisci hic repellat placeat!</p>
+
 </body>
 </html>
